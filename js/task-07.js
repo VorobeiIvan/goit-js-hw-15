@@ -10,10 +10,14 @@
 
 const input = document.getElementById('font-size-control');
 const text = document.getElementById('text');
+// text.style.fontSize = '55px';
+input.value = input.getAttribute('min') / 2;
 
 input.addEventListener('input', changeFontSizeText);
+
 function changeFontSizeText() {
   const size = parseInt(input.value);
   console.log(size);
+
   text.style.fontSize = size + 'px';
 }
